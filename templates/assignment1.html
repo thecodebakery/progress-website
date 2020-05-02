@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  Scratch Project #1
+{% endblock %}
+
+{% block main %}
+      <h1>Scratch Project #1</h1>
+  
+    <p>
+      <ul>
+        <li>Your project must have at least two sprites, at least one of which must resemble something other than a cat.</li>
+        <li>Your project must have at least three scripts total (i.e., not necessarily three per sprite).</li>
+        <li>Your project must use at least one condition, one loop, and one variable.</li>
+        <li>Your project must use at least one sound.</li>
+    </ul>
+
+      
+    </p>
+
+    <form action="/assignment/1" method="post" enctype="multipart/form-data">
+      <input type="file" name="file">
+      <input type="submit" value="submit">
+    </form>
+{% endblock %}

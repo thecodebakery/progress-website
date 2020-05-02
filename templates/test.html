@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  Test
+{% endblock %}
+
+{% block main %}
+  {% for key, value in tests.items() %}
+
+    {% if value == False %}
+      <h1 style="color:red">:( {{ key }}</h1>
+    {% else %}
+      <h1 style="color:green">:) {{ key }}</h1>
+    {% endif %}
+
+  {% endfor %}
+
+  <h3>
+    Overall score: {{ score }}
+  </h3>
+  <a href="/gradebook">Gradebook</a>
+{% endblock %}

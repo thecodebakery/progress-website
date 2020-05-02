@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  Register
+{% endblock %}
+
+{% block main %}
+  <h1>Register</h1>
+  <!--Original form: https://codepen.io/vikasverma93/pen/zplmq-->
+  <div class="login-box">
+    <div class="lb-header">
+      <a href="#" class="active" id="login-box-link">Login</a>
+      <a href="#" id="signup-box-link">Sign Up</a>
+    </div>
+    <div class="social-login">
+
+        <a href="/google"  style = " margin-left:150px">
+          <i class="fa fa-google-plus fa-lg"></i>
+          log in with Google
+        </a>
+
+    </div>
+    <form class="email-login" action="/login" method="POST">
+      <div class="u-form-group">
+        <input type="string" placeholder="Username" name="username" required />
+      </div>
+      <div class="u-form-group">
+        <input type="password" placeholder="Password" name="password" required />
+      </div>
+      <div class="u-form-group">
+        <button type="submit">Log in</button>
+      </div>
+      <div class="u-form-group">
+        <a href="/forgot-password" class="forgot-password">Forgot password?</a>
+      </div>
+    </form>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <form class="email-signup" action="/register" method="POST">
+      <div class="u-form-group">
+        <input type="text" placeholder="username" name="username" />
+      </div>
+      <div class="u-form-group">
+        <input type="email" placeholder="Email" name="email" />
+      </div>
+      <div class="u-form-group">
+        <input type="password" placeholder="Password" name="password" />
+      </div>
+      <div class="u-form-group">
+        <input type="password" placeholder="Confirm Password" name="confirm" />
+      </div>
+      <div class="u-form-group">
+        <button>Sign Up</button>
+      </div>
+    </form>
+  </div>
+  <br />
+  <small
+    >Original form designed by vikasverma93, see this project on
+    <a href="https://codepen.io/vikasverma93/pen/zplmq">codepen</a>. License under
+    MIT.</small
+  >
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="/static/client.js"></script>
+{% endblock %}

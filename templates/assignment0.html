@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  Scratch Project #0
+{% endblock %}
+
+{% block main %}
+      <h1>Scratch Project #0</h1>
+  
+    <p>
+      Instruction: For this project, you don't have to do anything, just make sure you have a valid scratch project to submit.
+      Upon submission, you should be able to see your score at <a href="/grades">this page</a>. Make sure you submit to google
+      classroom also.
+    </p>
+
+    <form action="/assignment/0" method="post" enctype="multipart/form-data">
+      <input type="file" name="file">
+      <input type="submit" value="submit">
+    </form>
+{% endblock %}
